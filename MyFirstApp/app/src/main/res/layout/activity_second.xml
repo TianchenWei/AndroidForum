@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/post"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation= "vertical"
+    android:backgroundTint="#ffb0cfee">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="7pt"
+        android:id="@+id/title"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/content"/>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffa0afad"
+            android:id="@+id/comments_no" />
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffa0afad"
+            android:text=" · "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffa0afad"
+            android:id="@+id/views_no" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/poster"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time_posted"
+        android:textColor="#ffa0afad" />
+
+    <!--comments list-->
+    <ListView android:id="@+id/comment_list"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"/>
+
+</LinearLayout>

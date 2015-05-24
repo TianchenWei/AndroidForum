@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+TO DO: Some hard code should be avoided in a real project.
+This is the layout of each post in the MyActivity.
+It should have following format:
+    Tag>
+    Last responder     avatar
+    Title
+    Content(first line only)
+    X Responses
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView android:id="@+id/tag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:textColor="#ff8554ee"
+        android:textSize="15sp"
+        android:layout_marginLeft="4pt"
+        android:layout_marginTop="2pt"
+        android:textStyle="bold"
+        android:textColorHighlight="#ff4680dc" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="10">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="left"
+            android:layout_weight="8">
+
+            <!-- first name of the responder-->
+            <TextView android:id="@+id/ffr_last_commentor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:lines="1"
+                android:layout_marginLeft="10pt"
+                android:textColor="#ff4279d1"
+                android:textSize="14sp"/>
+
+            <!-- title of the post -->
+            <TextView android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_marginLeft="10pt"
+                android:textColor="#ff447cd5"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- avatar of the responder-->
+        <ImageView android:id="@+id/profile_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:maxHeight="100px"
+            android:maxWidth="100px"
+            android:contentDescription="Avatar"
+           />
+    </TableRow>
+
+    <!-- first line of the content -->
+    <TextView android:id="@+id/content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginLeft="8pt"
+        android:textColor="#ff4781de"
+        android:textSize="10sp" />
+
+    <!-- number of responses -->
+    <TextView android:id="@+id/responses_no"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_marginLeft="8pt"
+        android:textColor="#ffa0afad"
+        android:textSize="10sp" />
+
+</LinearLayout>
